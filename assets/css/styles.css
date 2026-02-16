@@ -216,3 +216,111 @@ nav a {
 nav a:hover {
   color: #f9a8d4;
 }
+
+/* Typewriter animation for portrait overlay */
+.typewriter-container {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  width: 195px;
+  height: 82px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.typewriter-text {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  opacity: 0;
+  animation: 
+    typewriter 2s steps(40, end) forwards,
+    blink 0.5s step-end infinite,
+    fade-in 0.1s forwards;
+}
+
+.typewriter-text.line2 {
+  top: 28px;
+  animation-delay: 2s, 0s, 2s;
+}
+
+.typewriter-text.line3 {
+  top: 48px;
+  animation-delay: 4s, 0s, 4s;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cycle through sentences */
+.typewriter-cycle {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  overflow: hidden;
+}
+
+.typewriter-cycle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-right: 2px solid #fff;
+  width: 0;
+  opacity: 0;
+  animation: 
+    type-and-hide 6s linear both,
+    blink 0.4s step-end infinite;
+}
+
+@keyframes type-and-hide {
+  0% { width: 0; opacity: 0; }
+  1% { width: 0; opacity: 1; }
+  50% { width: 100%; opacity: 1; }
+  85% { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+
+.typewriter-cycle span:nth-child(1)  { animation-delay: 0s; }
+.typewriter-cycle span:nth-child(2)  { animation-delay: 6s; }
+.typewriter-cycle span:nth-child(3)  { animation-delay: 12s; }
+.typewriter-cycle span:nth-child(4)  { animation-delay: 18s; }
+.typewriter-cycle span:nth-child(5)  { animation-delay: 24s; }
+.typewriter-cycle span:nth-child(6)  { animation-delay: 30s; }
+.typewriter-cycle span:nth-child(7)  { animation-delay: 36s; }
+.typewriter-cycle span:nth-child(8)  { animation-delay: 42s; }
+.typewriter-cycle span:nth-child(9)  { animation-delay: 48s; }
+.typewriter-cycle span:nth-child(10) { animation-delay: 54s; }
+.typewriter-cycle span:nth-child(11) { animation-delay: 60s; }
+.typewriter-cycle span:nth-child(12) { animation-delay: 66s; }
+.typewriter-cycle span:nth-child(13) { animation-delay: 72s; }
+.typewriter-cycle span:nth-child(14) { animation-delay: 78s; }
+.typewriter-cycle span:nth-child(15) { animation-delay: 84s; }
+.typewriter-cycle span:nth-child(16) { animation-delay: 90s; }
+.typewriter-cycle span:nth-child(17) { animation-delay: 96s; }
+.typewriter-cycle span:nth-child(18) { animation-delay: 102s; }
+.typewriter-cycle span:nth-child(19) { animation-delay: 108s; }
+.typewriter-cycle span:nth-child(20) { animation-delay: 114s; }

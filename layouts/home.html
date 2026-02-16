@@ -2,7 +2,33 @@
 {{ $p := .Params }}
 <div class="grid lg:grid-cols-2 gap-4">
 	<div class="not-prose flex cursor-default flex-col space-y-4 rounded-lg border border-white p-4">
-		<img src="{{ or $p.portraitImage "/portrait.png" }}" alt="Portrait" class="w-[423px] h-[192px]">
+		<div style="position: relative; display: inline-block;">
+			<img src="{{ or $p.portraitImage "/portrait.png" }}" alt="Portrait" style="width: 423px; height: 192px; display: block;">
+			<div class="typewriter-container">
+				<div class="typewriter-cycle">
+					<span>Welcome, traveler. Stay a while.</span>
+					<span>The code compiles. Victory is mine.</span>
+					<span>404: Sleep not found.</span>
+					<span>Have you tried turning it off and on?</span>
+					<span>Debugging: being the detective.</span>
+					<span>It works on my machine...</span>
+					<span>Coffee loading... please wait.</span>
+					<span>sudo make me a sandwich.</span>
+					<span>There is no cloud. Just computers.</span>
+					<span>May your builds be ever green.</span>
+					<span>git commit -m "fixed stuff"</span>
+					<span>Mass hysteria! Dogs and cats!</span>
+					<span>A wild bug appeared!</span>
+					<span>Press any key to continue...</span>
+					<span>Segmentation fault. Core dumped.</span>
+					<span>Hello, World!</span>
+					<span>I should be mass effect.</span>
+					<span>Winter is coming. So is the deadline.</span>
+					<span>Trust the process. Ship the code.</span>
+					<span>This is the way.</span>
+				</div>
+			</div>
+		</div>
 		<div>
 			{{ with $p.introTitle }}<strong>{{ . }}</strong>{{ end }}
 			{{ with $p.introBody }}{{ . | markdownify }}{{ end }}
