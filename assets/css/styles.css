@@ -289,17 +289,11 @@ nav a:hover {
   white-space: pre-wrap;
   word-wrap: break-word;
   border-right: 2px solid transparent;
-  width: 0;
   opacity: 0;
-  animation: none;
 }
 
 .typewriter-cycle span.active {
   border-right: 2px solid #fff;
-  animation: typewriter-in 2s steps(40, end) forwards, blink 0.5s step-end infinite;
-}
-
-@keyframes typewriter-in {
-  from { width: 0; opacity: 1; }
-  to { width: 100%; opacity: 1; }
+  opacity: 1;
+  animation: blink 0.5s step-end infinite;
 }
