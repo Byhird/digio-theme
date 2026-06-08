@@ -293,7 +293,5 @@ nav a:hover {
 }
 
 .typewriter-cycle span.active {
-  border-right: 2px solid #fff;
   opacity: 1;
-  animation: blink 0.5s step-end infinite;
 }
