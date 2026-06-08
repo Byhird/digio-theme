@@ -288,39 +288,18 @@ nav a:hover {
   overflow: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
-  border-right: 2px solid #fff;
+  border-right: 2px solid transparent;
   width: 0;
   opacity: 0;
-  animation: 
-    type-and-hide 6s linear both,
-    blink 0.4s step-end infinite;
+  animation: none;
 }
 
-@keyframes type-and-hide {
-  0% { width: 0; opacity: 0; }
-  1% { width: 0; opacity: 1; }
-  50% { width: 100%; opacity: 1; }
-  85% { width: 100%; opacity: 1; }
-  100% { width: 100%; opacity: 0; }
+.typewriter-cycle span.active {
+  border-right: 2px solid #fff;
+  animation: typewriter-in 2s steps(40, end) forwards, blink 0.5s step-end infinite;
 }
 
-.typewriter-cycle span:nth-child(1)  { animation-delay: 0s; }
-.typewriter-cycle span:nth-child(2)  { animation-delay: 6s; }
-.typewriter-cycle span:nth-child(3)  { animation-delay: 12s; }
-.typewriter-cycle span:nth-child(4)  { animation-delay: 18s; }
-.typewriter-cycle span:nth-child(5)  { animation-delay: 24s; }
-.typewriter-cycle span:nth-child(6)  { animation-delay: 30s; }
-.typewriter-cycle span:nth-child(7)  { animation-delay: 36s; }
-.typewriter-cycle span:nth-child(8)  { animation-delay: 42s; }
-.typewriter-cycle span:nth-child(9)  { animation-delay: 48s; }
-.typewriter-cycle span:nth-child(10) { animation-delay: 54s; }
-.typewriter-cycle span:nth-child(11) { animation-delay: 60s; }
-.typewriter-cycle span:nth-child(12) { animation-delay: 66s; }
-.typewriter-cycle span:nth-child(13) { animation-delay: 72s; }
-.typewriter-cycle span:nth-child(14) { animation-delay: 78s; }
-.typewriter-cycle span:nth-child(15) { animation-delay: 84s; }
-.typewriter-cycle span:nth-child(16) { animation-delay: 90s; }
-.typewriter-cycle span:nth-child(17) { animation-delay: 96s; }
-.typewriter-cycle span:nth-child(18) { animation-delay: 102s; }
-.typewriter-cycle span:nth-child(19) { animation-delay: 108s; }
-.typewriter-cycle span:nth-child(20) { animation-delay: 114s; }
+@keyframes typewriter-in {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
