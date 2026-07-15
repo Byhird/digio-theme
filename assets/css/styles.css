@@ -220,14 +220,38 @@ nav a:hover {
 /* Typewriter animation for portrait overlay */
 .typewriter-container {
   position: absolute;
-  top: 85px;
-  right: 10px;
-  width: 195px;
-  height: 82px;
-  padding: 8px;
-  font-size: 16px;
+  top: 44%;
+  right: 2%;
+  width: 46%;
+  height: 43%;
+  padding: 2%;
+  font-size: clamp(10px, 3.8vw, 16px);
   line-height: 1.2;
   overflow: hidden;
+}
+
+.portrait-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.portrait-image {
+  width: 100%;
+  height: auto;
+  max-width: 423px;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .typewriter-container {
+    top: 42%;
+    right: 2%;
+    width: 48%;
+    height: 46%;
+    font-size: clamp(9px, 3.6vw, 14px);
+    line-height: 1.1;
+  }
 }
 
 .typewriter-text {
